@@ -1,6 +1,6 @@
 name        "mongodb-cookbooks"
 description 'MongoDB Berkshelf based install'
-maintainer  "FatalBadgers"
+maintainer  "Prosperence"
 license     "MIT"
 version     "1.0.0"
 
