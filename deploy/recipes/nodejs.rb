@@ -13,13 +13,7 @@ node[:deploy].each do |application, deploy|
   end
 
   opsworks_deploy do
-    deploy_data deploy
-    app application
-  end
-
-  opsworks_nodejs do
-    deploy_data deploy
-    app application
+    execute "/usr/local/bin/npm start"
   end
 
   application_environment_file do
