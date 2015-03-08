@@ -11,9 +11,15 @@ node[:deploy].each do |application, deploy|
     group deploy[:group]
     path deploy[:deploy_to]
   end
-
+  
   opsworks_deploy do
-    execute "/usr/local/bin/npm start"
+    deploy_data deploy
+    app application
+  end
+
+  opsworks_nodejs do
+    deploy_data deploy
+    app application
   end
 
   application_environment_file do
